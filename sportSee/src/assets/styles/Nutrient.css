@@ -1,0 +1,64 @@
+#nutrient {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#nutrient .nutrient-card {
+  width: 258px;
+  height: 124px;
+  border-radius: 5px;
+  background: #FBFBFB;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+}
+
+#nutrient .nutrient-card .nutrient-picto {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#nutrient .nutrient-card#calories .nutrient-picto {
+  background-color: #ff000010;
+  color: #ff0000;
+}
+
+#nutrient .nutrient-card#proteines .nutrient-picto {
+  background-color: #4AB8FF10;
+  color: #4AB8FF;
+}
+
+#nutrient .nutrient-card#glucides .nutrient-picto {
+  background-color: #FDCC0C10;
+  color: #FDCC0C;
+}
+
+#nutrient .nutrient-card#lipides .nutrient-picto {
+  background-color: #FD518110;
+  color: #FD5181;
+}
+
+.nutrient-detail {
+  min-width: 90px;
+}
+
+.nutrient-detail .nutrient-score {
+  color: #282D30;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nutrient-detail .nutrient-name {
+  color: #74798C;
+  font-size: 14px;
+  font-weight: 500;
+}

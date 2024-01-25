@@ -1,0 +1,19 @@
+{
+  "name": "sportsee",
+  "version": "1.0.0",
+  "description": "Front end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Romainbocquet/SportSee.git"
+  },
+  "author": "1romain.bocquet1@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Romainbocquet/SportSee/issues"
+  },
+  "homepage": "https://github.com/Romainbocquet/SportSee#readme"
+}

@@ -1,0 +1,34 @@
+.averageSessions {
+  border-radius: 5px;
+  background: #F00;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.02);
+  position: relative;
+}
+
+.averageSessions h2 {
+  color: #FF8181;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.custom-tooltip {
+  background-color: white;
+}
+
+.custom-tooltip .label {
+  color: black;
+  padding: 5px 10px;
+}
+
+.rectangle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  background-color: rgba(1, 1, 1, 0.0975);
+}

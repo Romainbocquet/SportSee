@@ -1,0 +1,25 @@
+.custom-legende {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.custom-legende-elt {
+  display: flex;
+  align-items: center;
+  margin-right: 32px;
+}
+
+.custom-legende-elt div {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.custom-legende-elt span {
+  color: #74798C;
+  font-size: 14px;
+  font-weight: 500;
+}

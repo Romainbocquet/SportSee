@@ -1,0 +1,42 @@
+#dashboard {
+  padding: 50px 90px 0px 220px;
+}
+
+#dashboard .bvn-message {
+  color: #000;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+#dashboard .bvn-message span {
+  color: #FF0101;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+#dashboard .encouragement {
+  color: #000;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#dashboard .dashboard-detail {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+}
+
+.graphiques-line {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.graphiques {
+  width: 80%;
+}
+
+.graphiques-line {
+  width: 100%;
+  margin-bottom: 30px;
+}

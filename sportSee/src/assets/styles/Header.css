@@ -1,0 +1,33 @@
+#navbar {
+  background-color: #020203;
+  display: flex;
+  height: 90px;
+  padding: 0px 90px 0px 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navbar img {
+  height: 57px;
+  color: rgba(0, 0, 0, 0.012);
+}
+
+#navbar .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar a {
+  color: #FFF;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30vh;
+}
+
+#navbar #sportsee-name {
+  color: #FF0101;
+  margin-left: 20px;
+  font-size: 24px;
+}
