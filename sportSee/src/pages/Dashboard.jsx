@@ -12,7 +12,6 @@ import userData from '../../datas/data.js';
 export default function Dashboard() {
   const { id } = useParams();
   const [checked, setChecked] = React.useState(false);
-  const [useMockData, setUseMockData] = useState(true);
   const [userDatas, setUserDatas] = useState(null);
   const [userDatasAverageSessions, setUserDatasAverageSessions] = useState(null);
   const [userDatasPerf, setUserDatasPerf] = useState(null);
