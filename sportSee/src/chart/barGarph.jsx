@@ -36,7 +36,6 @@ const barGarph = ({data, title}) => {
   return (
     <>
     <h2>{title}</h2>
-    <div></div>
     <ResponsiveContainer width="100%" height="80%">
       <BarChart
         width={500}
@@ -49,7 +48,7 @@ const barGarph = ({data, title}) => {
           bottom: 5,
         }}
       >
-        <CartesianGrid strokeDasharray="3 3" />
+        <CartesianGrid strokeDasharray="3 3" vertical={false} />
         <XAxis dataKey="day" tickFormatter={(value) => new Date(value).getDate()} tickLine={false} />
         <YAxis yAxisId="kilogram" dataKey="kilogram" orientation="right" tickLine={false} axisLine={false}/>
         <YAxis yAxisId="calories" dataKey="calories" display="none"/>
