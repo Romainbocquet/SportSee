@@ -41,3 +41,9 @@
   width: 100%;
   margin-bottom: 30px;
 }
+
+.profile-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

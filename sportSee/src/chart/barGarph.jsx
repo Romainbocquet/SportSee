@@ -50,7 +50,7 @@ const barGarph = ({data, title}) => {
       >
         <CartesianGrid strokeDasharray="3 3" vertical={false} />
         <XAxis dataKey="day" tickFormatter={(value) => new Date(value).getDate()} tickLine={false} />
-        <YAxis yAxisId="kilogram" dataKey="kilogram" orientation="right" tickLine={false} axisLine={false}/>
+        <YAxis yAxisId="kilogram" dataKey="kilogram" orientation="right" tickLine={false} axisLine={false} domain={['dataMin - 2', 'dataMax + 2']}/>
         <YAxis yAxisId="calories" dataKey="calories" display="none"/>
         <Tooltip
           content={<CustomTooltip />}
