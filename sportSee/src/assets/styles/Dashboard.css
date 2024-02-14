@@ -47,3 +47,38 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 1024px){
+  #dashboard .dashboard-detail {
+    flex-direction: column-reverse;
+  }
+
+  .graphiques {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .graphiques-line{
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .averageSessions {
+    width: 260px;
+  }
+
+  .performance {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .profile-title {
+    flex-direction: column;
+  }
+
+  .profile-title div:nth-child(1) {
+    margin-top: 50px;
+  }
+}

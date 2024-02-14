@@ -48,7 +48,6 @@ export default function Dashboard() {
         setActiviteData(activiteResponse);
         setLoading(false);
       } catch (error) {
-        console.error('Error fetching data:', error);
         setLoading(false);
       }
     };
