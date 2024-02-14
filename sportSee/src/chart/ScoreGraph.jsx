@@ -11,7 +11,7 @@ const ScoreGraph = (data) => {
     { name: 'Group B', value: dataRest },
   ];
   
-  const COLORS = ['#E60000', '#00000003'];
+  const COLORS = ['#E60000', '#fbfbfb'];
 
   return (
     <div className='pieChart'>

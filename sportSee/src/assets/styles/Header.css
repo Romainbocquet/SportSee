@@ -23,11 +23,23 @@
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
-  margin-left: 30vh;
+}
+
+#navbar nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 200px;
 }
 
 #navbar #sportsee-name {
   color: #FF0101;
   margin-left: 20px;
   font-size: 24px;
+}
+
+@media screen and (max-width: 900px){
+  #navbar nav {
+    display: none;
+  }
 }

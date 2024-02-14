@@ -8,7 +8,6 @@ const Activite = ({activiteData}) => {
     return <div>Données de Activité quotidienne non disponibles.</div>;
   }
 
-  console.log(activiteData);
   return (    
     <div className='activite'>
       <BarGarph data={activiteData.sessions} title="Activité quotidienne" />
