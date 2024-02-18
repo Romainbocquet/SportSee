@@ -1,5 +1,6 @@
 import logo from '../assets/image/sportsee-logo.png';
 import '../assets/styles/Header.css';
+import { NavLink } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -10,7 +11,9 @@ export default function Header() {
         </div>
         <nav>
           <a href="#">Accueil</a>
-          <a href="#">Profil</a>
+          <NavLink to="/user/18">
+            <a href="#">Profil</a>
+          </NavLink>
           <a href="#">Réglage</a>
           <a href="#">Communauté</a>
         </nav>
