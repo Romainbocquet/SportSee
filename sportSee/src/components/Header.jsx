@@ -10,9 +10,11 @@ export default function Header() {
           <p id='sportsee-name'>SportSee</p>
         </div>
         <nav>
-          <a href="#">Accueil</a>
+          <NavLink to="/">
+          Accueil
+          </NavLink>
           <NavLink to="/user/18">
-            <a href="#">Profil</a>
+            Profil
           </NavLink>
           <a href="#">Réglage</a>
           <a href="#">Communauté</a>

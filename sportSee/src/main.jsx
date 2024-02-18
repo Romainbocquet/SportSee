@@ -15,6 +15,10 @@ const router = createBrowserRouter([
         path: "/user/:id",
         element: <Dashboard />,
       },
+      {
+        path: "/*",
+        element: <Error404 />,
+      }
     ],
   },
 ]);

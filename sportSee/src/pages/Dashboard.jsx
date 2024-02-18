@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { useParams, Navigate } from 'react-router-dom';
 import '../assets/styles/Dashboard.css';
-import { useParams } from 'react-router-dom';
 import Nutrient from '../components/Nutrient.jsx';
 import Switch from '../components/Switch.jsx';
 import AverageSessions from '../components/AverageSessions.jsx';
@@ -9,8 +9,10 @@ import Score from '../components/Score.jsx';
 import Activite from '../components/Activite.jsx';
 import * as dataApi from '../../datas/dataApi';
 import userData from '../../datas/data.js';
+
 export default function Dashboard() {
   const { id } = useParams();
+  const user = userData.USER_MAIN_DATA.find(user => user.id === parseInt(id, 10));
   const [checked, setChecked] = React.useState(false);
   const [userDatas, setUserDatas] = useState(null);
   const [userDatasAverageSessions, setUserDatasAverageSessions] = useState(null);
@@ -48,12 +50,16 @@ export default function Dashboard() {
         setActiviteData(activiteResponse);
         setLoading(false);
       } catch (error) {
-        setLoading(false);
+        setLoading(true);
       }
     };
 
     fetchData();
   }, [id, checked]);
+
+  if (!user) {
+    return <Navigate to="/404" />;
+  }
 
   if (loading) {
     return <div>Loading...</div>;
