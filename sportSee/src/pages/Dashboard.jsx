@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import '../assets/styles/Dashboard.css';
 import Nutrient from '../components/Nutrient.jsx';
 import Switch from '../components/Switch.jsx';
@@ -8,11 +8,12 @@ import Performance from '../components/Performance.jsx';
 import Score from '../components/Score.jsx';
 import Activite from '../components/Activite.jsx';
 import * as dataApi from '../../datas/dataApi';
-import userData from '../../datas/data.js';
+import userDataMock from '../../datas/dataMock.js';
+import { UserDataModels, AverageSessionsDataModels, ActivityDataModels, PerfDataModels } from '../models/ModelsData.js';
 
 export default function Dashboard() {
   const { id } = useParams();
-  const user = userData.USER_MAIN_DATA.find(user => user.id === parseInt(id, 10));
+  const user = userDataMock.USER_MAIN_DATA.find(user => user.id === parseInt(id, 10));
   const [checked, setChecked] = React.useState(false);
   const [userDatas, setUserDatas] = useState(null);
   const [userDatasAverageSessions, setUserDatasAverageSessions] = useState(null);
@@ -29,19 +30,22 @@ export default function Dashboard() {
         let activiteResponse;
 
         if (!checked) {
-          userDataResponse = userData.USER_MAIN_DATA.find(user => user.id === parseInt(id, 10));
-          averageSessionsResponse = userData.USER_AVERAGE_SESSIONS.find(user => user.userId === parseInt(id, 10));
-          perfResponse = userData.USER_PERFORMANCE.find(user => user.userId === parseInt(id, 10));
-          activiteResponse = userData.USER_ACTIVITY.find(user => user.userId === parseInt(id, 10));
+          userDataResponse = userDataMock.USER_MAIN_DATA.find(user => user.id === parseInt(id, 10));
+          averageSessionsResponse = userDataMock.USER_AVERAGE_SESSIONS.find(user => user.userId === parseInt(id, 10));
+          perfResponse = userDataMock.USER_PERFORMANCE.find(user => user.userId === parseInt(id, 10));
+          activiteResponse = userDataMock.USER_ACTIVITY.find(user => user.userId === parseInt(id, 10));
         } else {
           const apiData = await dataApi.getUserData(id);
-          userDataResponse = apiData.data;
+          userDataResponse = UserDataModels.fromApiResponse(apiData.data);
+
           const averageSessionsData = await dataApi.getAverageSessionsData(id)
-          averageSessionsResponse = averageSessionsData.data;
+          averageSessionsResponse = AverageSessionsDataModels.fromApiResponse(averageSessionsData.data);
+
           const perfData = await dataApi.getPerformanceData(id);
-          perfResponse = perfData.data;
+          perfResponse = PerfDataModels.fromApiResponse(perfData.data);
+          
           const activiteData = await dataApi.getActivityData(id);
-          activiteResponse = activiteData.data;
+          activiteResponse = ActivityDataModels.fromApiResponse(activiteData.data);
         }
 
         setUserDatas(userDataResponse);
@@ -58,16 +62,13 @@ export default function Dashboard() {
   }, [id, checked]);
 
   if (!user) {
-    return <Navigate to="/404" />;
+    return <div className='user-not-found'>Utilisateur non trouvé</div>;
   }
 
   if (loading) {
     return <div>Loading...</div>;
   }
 
-  if (!userDatas) {
-    return <div>Utilisateur non trouvé</div>;
-  }
   return (
     <div id="dashboard">
       <div className='profile-title'>

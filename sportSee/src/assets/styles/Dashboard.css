@@ -52,6 +52,13 @@
   justify-content: space-between;
 }
 
+.user-not-found {
+  color: #000;
+  padding: 100px 200px;
+  font-size: 50px;
+  font-weight: 800;
+}
+
 @media screen and (max-width: 1024px){
   #dashboard .dashboard-detail {
     flex-direction: column-reverse;
