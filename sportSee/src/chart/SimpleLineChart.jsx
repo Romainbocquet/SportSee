@@ -23,7 +23,7 @@ const SimpleLineChart = ({ data, title }) => {
     return () => {
       observer.disconnect();
     };
-  }, []); // Exécute une seule fois après le rendu initial
+  }, []); 
 
   useEffect(() => {
     window.addEventListener('resize', updateRectangleWidth);
@@ -59,6 +59,14 @@ const SimpleLineChart = ({ data, title }) => {
     return null;
   };
 
+  if (data.length === 0) {
+    return (
+      <div>
+        <p className='noData'>Aucune donnée disponible</p>
+      </div>
+    );
+  }
+
   return (
     <div>
       <h2>{title}</h2>
@@ -86,8 +94,6 @@ const SimpleLineChart = ({ data, title }) => {
 SimpleLineChart.propTypes = {
   data: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
-  active: PropTypes.bool,
-  payload: PropTypes.array,
 };
 
 export default SimpleLineChart;

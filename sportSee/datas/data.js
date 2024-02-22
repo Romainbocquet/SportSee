@@ -21,7 +21,7 @@ const USER_MAIN_DATA = [
           lastName: 'Patate',
           age: 21,
       },
-      todayScore: 0.60,
+      todayScore: 0.7,
       keyData: {
           calorieCount: 1000,
           proteinCount: 120,

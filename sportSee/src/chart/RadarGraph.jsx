@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 
 const RadarGraph = (data) => {
 
+  if (data.data.length === 0) {
+    return (
+        <p className='noData'>Aucune donnée disponible</p>
+    );
+  }
+
   return (
    <RadarChart outerRadius={90} width={350} height={260} data={data.data} fill="#282D30">
     <PolarGrid stroke="#fff"/>

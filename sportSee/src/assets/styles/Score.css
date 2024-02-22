@@ -14,9 +14,7 @@
   font-size: 15px;
   font-weight: 500;
   width: 100%;
-  margin-left: 60px;
 }
-
 
 .score .pieChart {
   position: relative;
@@ -47,4 +45,9 @@
   font-weight: 500;
   max-width: 100px;
   text-align: center;
+}
+
+.score .noData {
+  position: unset;
+  color: #20253A;
 }

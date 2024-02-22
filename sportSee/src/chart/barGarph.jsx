@@ -1,4 +1,4 @@
-import { BarChart, Bar, Rectangle, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import PropTypes from 'prop-types';
 import '../assets/styles/CustomLegende.css';
 
@@ -32,6 +32,14 @@ const barGarph = ({data, title}) => {
 
     return null;
   };
+
+  if (data.length === 0) {
+    return (
+      <div>
+        <p className='noData'>Aucune donnée disponible</p>
+      </div>
+    );
+  }
 
   return (
     <>

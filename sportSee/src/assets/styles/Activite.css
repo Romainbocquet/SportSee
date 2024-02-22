@@ -28,3 +28,10 @@
 .activite .recharts-surface {
   margin-top: 20px;
 }
+
+.activite .noData {
+  position: relative;
+  top: 30px;
+  left: 30px;
+  color: #20253A;
+}
